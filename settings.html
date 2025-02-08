@@ -7,15 +7,27 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="default">
-    <h2>Settings</h2>
-    <label for="theme">Select Theme:</label>
-    <select id="theme" onchange="changeTheme()">
-        <option value="default">Default</option>
-        <option value="black-gold">Black & Gold</option>
-        <option value="blue-black">Blue & Black</option>
-        <option value="white-black">White & Black</option>
-    </select>
-    <button onclick="logout()">Logout</button>
+    <div class="navbar">
+        <h2>Menu</h2>
+        <button onclick="showSection('index')">Home</button>
+        <button onclick="showSection('create-plugin')">Create Plugin</button>
+        <button onclick="showSection('settings')">Settings</button>
+        <button onclick="showSection('login')">Login</button>
+        <button onclick="showSection('register')">Register</button>
+    </div>
+
+    <div class="content">
+        <h2>Settings</h2>
+        <label for="theme">Select Theme:</label>
+        <select id="theme" onchange="changeTheme()">
+            <option value="default">Default</option>
+            <option value="black-gold">Black & Gold</option>
+            <option value="blue-black">Blue & Black</option>
+            <option value="white-black">White & Black</option>
+        </select>
+        <button onclick="logout()">Logout</button>
+        <button onclick="showSection('index')">Back to Home</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
