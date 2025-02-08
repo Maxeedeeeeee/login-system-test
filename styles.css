@@ -1,1 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+}
 
+#navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+button {
+    margin: 5px;
+}
+
+#cookie-banner {
+    display: none; /* Visible only if cookies are not accepted */
+    background-color: #f1f1f1;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.default {
+    background-color: white;
+    color: black;
+}
+
+.black-gold {
+    background-color: black;
+    color: gold;
+}
+
+.blue-black {
+    background-color: blue;
+    color: black;
+}
+
+.white-black {
+    background-color: white;
+    color: black;
+}
+
+#plugin-list {
+    margin: 20px;
+}
+
+.plugin-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+}
