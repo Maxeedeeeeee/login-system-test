@@ -1,5 +1,5 @@
 // Function to handle registration  
-document.getElementById("register-form").addEventListener("submit", function(e) {
+document.getElementById("register-form")?.addEventListener("submit", function(e) {
     e.preventDefault();
     
     const username = document.getElementById("new-username").value;
@@ -30,12 +30,13 @@ document.getElementById("register-form").addEventListener("submit", function(e) 
 });
 
 // Function to handle login  
-document.getElementById("login-form").addEventListener("submit", function(e) {
+document.getElementById("login-form")?.addEventListener("submit", function(e) {
     e.preventDefault();
     
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
     const loginError = document.getElementById("login-error");
+    const loginStatus = document.getElementById("login-status");
 
     // Fetch users  
     const users = JSON.parse(localStorage.getItem('users')) || [];
@@ -44,20 +45,34 @@ document.getElementById("login-form").addEventListener("submit", function(e) {
     if (user) {
         alert("Logged in as " + username);
         localStorage.setItem('loggedInUser', username); // Set logged-in user  
+        loginStatus.textContent = `You have logged into your account named ${username}`;
+        loginStatus.style.display = "block";
         window.location.href = 'index.html'; // Redirect to main page  
     } else {
-        loginError.textContent = "Invalid username or password!";
+        loginError.textContent = "You have entered invalid credentials.";
     }
 });
 
 // Check for logged-in user on index.html  
 if (window.location.pathname.endsWith("index.html")) {
     const loggedInUser = localStorage.getItem('loggedInUser');
+    const loginStatus = document.getElementById("login-status");
+
     if (loggedInUser) {
-        // Show logout button or user info here  
-        console.log(`Welcome back, ${loggedInUser}!`);
+        loginStatus.textContent = `Welcome back, ${loggedInUser}!`;
+        loginStatus.style.display = "block";
     } else {
         // Redirect to login if not logged in  
         window.location.href = 'login.html';
     }
 }
+
+// Cookie consent logic  
+document.getElementById("accept-cookies")?.addEventListener("click", function() {
+    document.getElementById("cookie-consent").style.display = "none";
+    document.cookie = "consent=true";
+});
+
+document.getElementById("decline-cookies")?.addEventListener("click", function() {
+    document.getElementById("cookie-consent").style.display = "none";
+});
