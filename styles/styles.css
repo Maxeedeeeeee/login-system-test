@@ -5,6 +5,19 @@ body {
     padding: 20px;
 }
 
+.navbar {
+    display: flex;
+    background-color: #333;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: white;
+    padding: 14px;
+    text-decoration: none;
+}
+
 .form-container {
     background: white;
     max-width: 400px;
@@ -47,4 +60,15 @@ body {
 
 a {
     color: #007bff;
+}
+
+.top-right-message {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Initially hidden */
 }
