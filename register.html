@@ -1,1 +1,23 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Register</title>
+</head>
+<body>
+    <div class="form-container">
+        <form id="register-form">
+            <h2>Register</h2>
+            <input type="text" id="new-username" placeholder="Username" required>
+            <input type="password" id="new-password" placeholder="Password" required>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+            <button type="submit">Register</button>
+            <p class="error-message" id="register-error"></p>
+            
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </form>
+    </div>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
