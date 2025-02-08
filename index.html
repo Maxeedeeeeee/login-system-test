@@ -3,31 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plugin Management</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Plugin Manager</title>
 </head>
-<body class="default">
+<body>
     <div class="navbar">
-        <h2>Menu</h2>
-        <button onclick="showSection('index')">Home</button>
-        <button onclick="showSection('create-plugin')">Create Plugin</button>
-        <button onclick="showSection('settings')">Settings</button>
-        <button onclick="showSection('login')">Login</button>
-        <button onclick="showSection('register')">Register</button>
+        <a href="settings.html">Settings</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+    </div>
+    
+    <div class="plugin-list">
+        <!-- Dynamically generated plugins will appear here -->
     </div>
 
-    <div class="content">
-        <div id="plugin-list">
-            <h2>Available Plugins</h2>
-            <div id="plugins"></div>
-        </div>
-
-        <div id="cookie-banner" class="cookie-banner">
-            <p>Do you accept cookies for notifications?</p>
-            <button onclick="acceptCookies()">Accept</button>
-        </div>
+    <div id="cookie-consent">
+        <p>Do you accept cookies?</p>
+        <button id="accept-cookies">Yes</button>
+        <button id="decline-cookies">No</button>
     </div>
 
-    <script src="script.js"></script>
+    <script src="scripts/app.js"></script>
 </body>
 </html>
